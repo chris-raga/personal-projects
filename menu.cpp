@@ -9,7 +9,7 @@ int main() {
     do {
         cout << "Main Menu\n";
         cout << "1. Chlorine\n";
-        cout << "2. Option 2\n";
+        cout << "2. Ammonia\n";
         cout << "3. Option 3\n";
         cout << "4. Option 4\n";
         cout << "5. Option 5\n";
