@@ -7,7 +7,7 @@ int main() {
     int chemical;
     int water;
     do {
-        cout << "Menu\n";
+        cout << "Main Menu\n";
         cout << "1. Chlorine\n";
         cout << "2. Option 2\n";
         cout << "3. Option 3\n";
