@@ -12,8 +12,8 @@ int main() {
         cout << "2. Ammonia\n";
         cout << "3. Option 3\n";
         cout << "4. Option 4\n";
-        cout << "5. Option 5\n";
-        cout << "6. Exit\n";
+        cout << "5. Exit\n";
+
 
         cout << "Enter your choice (1-6): ";
         cin >> choice;
