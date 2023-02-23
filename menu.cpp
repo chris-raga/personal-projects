@@ -22,14 +22,14 @@ int main ()
         cout << "Option 1: Chemical\n";
         cout <<"Please enter the amount of water you wish to purify:\n ";
         cin >> water;
-        
+
         if (water < 0)
         {
         cout << "How the FCK do u have NEGATIVE water HUH?????????????";
         }
 
         else
-        {
+    {
         cout << "You entered " << water << " gallons of water. Is this correct?\n\n";
         cout << "Type 1 if this is CORRECT \n";
         cout << "Type 2 if this is INCORRECT \n ";
@@ -45,6 +45,7 @@ int main ()
         cout << "Too bad UGLY BITCH";
         }
     }
+
     }
         
     else if (selection == 2) 
