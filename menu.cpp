@@ -1,95 +1,60 @@
 #include <iostream>
-#include <limits>
 using namespace std;
 
-int main() {
-    int choice;
-    int chemical;
+int main ()
+{ 
     int water;
-    do {
-        cout << "Main Menu\n";
-        cout << "1. Chlorine\n";
-        cout << "2. Ammonia\n";
-        cout << "3. Option 3\n";
-        cout << "4. Option 4\n";
-        cout << "5. Exit\n";
+    int chemical;
+    int selection;
+    int check;
 
+    cout << "Water Solution Calculator\n\n";
+    cout << "Main Menu\n\n";
+    cout << "Option 1: Chemical" << endl;
+    cout << "Option 2" << endl;
+    cout << "Option 3" << endl;
 
-        cout << "Enter your choice (1-6): ";
-        cin >> choice;
-
-        switch (choice) {
-
-            case 1:
-                cout << "Chlorine" << endl;
-                cout << "Enter amount of chlorine in mL.\n";
-                try {
-                    cin >> chemical;
-                    if (cin.fail()) {
-                        throw runtime_error("Invalid input: please enter a number.");
-                    }
-                } catch (const runtime_error& e) {
-                    cout << e.what() << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    cout << "Press 1 to return to main menu." << endl;
-                    cin.get();
-                    break;
-                }
-                cout << "Enter amount of water to be treated in gallons.\n";
-                try {
-                    cin >> water;
-                    if (cin.fail()) {
-                        throw runtime_error("Invalid input: please enter a number.");
-                    }
-                } catch (const runtime_error& e) {
-                    cout << e.what() << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    cout << "Press 1 to return to main menu." << endl;
-                    cin.get();
-                    break;
-                }
-                cout << "You indicated " << chemical << " mL of chlorine and " << water << " gallons of water." << endl;
-                cout << "Is that correct?" << endl;
-                cout << "Press 1 to return to main menu." << endl;
-                cin.ignore();
-                cin.get();
-                break;
-
-            case 2:
-                cout << "You selected Option 2" << endl;
-                // Perform action for Option 2
-                cout << "Press 1 to return to main menu." << endl;
-                cin.ignore();
-                cin.get();
-                break;
-
-            case 3:
-                cout << "You selected Option 3" << endl;
-                // Perform action for Option 3
-                cout << "Press 1 to return to main menu." << endl;
-                cin.ignore();
-                cin.get();
-                break;
-
-            case 4:
-                cout << "You selected Option 4" << endl;
-                // Perform action for Option 4
-                cout << "Press 1 to return to main menu." << endl;
-                cin.ignore();
-                cin.get();
-                break;
-
-            case 5:
-                cout << "Exiting program..." << endl;
-                break;
-                
-            default:
-                cout << "Invalid choice" << endl;
-                break;
+    cout << "Select an option: ";
+    cin >> selection;
+    
+    if (selection == 1) 
+    {
+        cout << "Option 1: Chemical\n";
+        cout <<"Please enter the amount of water you wish to purify:\n ";
+        cin >> water;
+        
+        if (water < 0)
+        {
+        cout << "How the FCK do u have NEGATIVE water HUH?????????????";
         }
-    } while (choice != 5);
+
+        else
+        {
+        cout << "You entered " << water << " gallons of water. Is this correct?\n\n";
+        cout << "Type 1 if this is CORRECT \n";
+        cout << "Type 2 if this is INCORRECT \n ";
+        cout << "Selection: ";
+        cin >> check;
+
+        if (check ==1) 
+        {
+        cout << "The amount of chemical you need is: " << water/0.69;
+        }
+        else 
+        {
+        cout << "Too bad UGLY BITCH";
+        }
+    }
+    }
+        
+    else if (selection == 2) 
+        cout << "you selected option 2";
+
+    else if (selection == 3)
+        cout << "you selected option 3";
+
+    else 
+        cout << "wtf did you do";
 
     return 0;
 }
